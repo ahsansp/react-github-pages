@@ -1,4 +1,11 @@
-import { NavBar, AdsSlide, IconApps } from "../../component";
+import {
+  NavBar,
+  AdsSlide,
+  IconApps,
+  ProductCard,
+  ContainerProductCard,
+  XSlideProduct,
+} from "../../component";
 import { Row, Col, Button, Card } from "react-bootstrap";
 import { Logo } from "../../asset";
 import "./style.css";
@@ -87,7 +94,220 @@ function Home() {
           </Col>
         </Row>
       </section>
-      <section></section>
+      <section>
+        <XSlideProduct
+          maxOffset={12 * 16 * 2}
+          offset={500}
+          item={() => (
+            <>
+              <ProductCard
+                src={Logo}
+                style={{ width: "12rem" }}
+                title={"Product Name kana aksa aksna ajdskha asiajh"}
+                price={20000}
+                place={"Bandung"}
+                href={"/#"}
+              />
+              <ProductCard
+                src={Logo}
+                style={{ width: "12rem" }}
+                title={"Product Name kana aksa aksna ajdskha asiajh"}
+                price={20000}
+                place={"Bandung"}
+                href={"/#"}
+              />
+              <ProductCard
+                src={Logo}
+                style={{ width: "12rem" }}
+                title={"Product Name kana aksa aksna ajdskha asiajh"}
+                price={20000}
+                place={"Bandung"}
+                href={"/#"}
+              />
+              <ProductCard
+                src={Logo}
+                style={{ width: "12rem" }}
+                title={"Product Name kana aksa aksna ajdskha asiajh"}
+                price={20000}
+                place={"Bandung"}
+                href={"/#"}
+              />
+              <ProductCard
+                src={Logo}
+                style={{ width: "12rem" }}
+                title={"Product Name kana aksa aksna ajdskha asiajh"}
+                price={20000}
+                place={"Bandung"}
+                href={"/#"}
+              />
+              <ProductCard
+                src={Logo}
+                style={{ width: "12rem" }}
+                title={"Product Name kana aksa aksna ajdskha asiajh"}
+                price={20000}
+                place={"Bandung"}
+                href={"/#"}
+              />
+            </>
+          )}
+        />
+      </section>
+      <section>
+        <Row className="p-0 m-0">
+          <Col className="d-flex px-1 overflow-auto">
+            <ProductCard
+              src={Logo}
+              style={{ width: "12rem" }}
+              title={"Product Name kana aksa aksna ajdskha asiajh"}
+              price={20000}
+              place={"Bandung"}
+              href={"/#"}
+            />
+            <ProductCard
+              src={Logo}
+              style={{ width: "12rem" }}
+              title={"Product Name kana aksa aksna ajdskha asiajh"}
+              price={20000}
+              place={"Bandung"}
+              href={"/#"}
+            />
+            <ProductCard
+              src={Logo}
+              style={{ width: "12rem" }}
+              title={"Product Name kana aksa aksna ajdskha asiajh"}
+              price={20000}
+              place={"Bandung"}
+              href={"/#"}
+            />
+            <ProductCard
+              src={Logo}
+              style={{ width: "12rem" }}
+              title={"Product Name kana aksa aksna ajdskha asiajh"}
+              price={20000}
+              place={"Bandung"}
+              href={"/#"}
+            />
+            <ProductCard
+              src={Logo}
+              style={{ width: "12rem" }}
+              title={"Product Name kana aksa aksna ajdskha asiajh"}
+              price={20000}
+              place={"Bandung"}
+              href={"/#"}
+            />
+            <ProductCard
+              src={Logo}
+              style={{ width: "12rem" }}
+              title={"Product Name kana aksa aksna ajdskha asiajh"}
+              price={20000}
+              place={"Bandung"}
+              href={"/#"}
+            />
+            <ProductCard
+              src={Logo}
+              style={{ width: "12rem" }}
+              title={"Product Name kana aksa aksna ajdskha asiajh"}
+              price={20000}
+              place={"Bandung"}
+              href={"/#"}
+            />
+            <ProductCard
+              src={Logo}
+              style={{ width: "12rem" }}
+              title={"Product Name kana aksa aksna ajdskha asiajh"}
+              price={20000}
+              place={"Bandung"}
+              href={"/#"}
+            />
+            <ProductCard
+              src={Logo}
+              style={{ width: "12rem" }}
+              title={"Product Name kana aksa aksna ajdskha asiajh"}
+              price={20000}
+              place={"Bandung"}
+              href={"/#"}
+            />
+          </Col>
+        </Row>
+      </section>
+      <section>
+        <Row className="p-0 m-0">
+          <Col className="d-flex px-1 overflow-auto">
+            <ProductCard
+              src={Logo}
+              style={{ width: "12rem" }}
+              title={"Product Name kana aksa aksna ajdskha asiajh"}
+              price={20000}
+              place={"Bandung"}
+              href={"/#"}
+            />
+            <ProductCard
+              src={Logo}
+              style={{ width: "12rem" }}
+              title={"Product Name kana aksa aksna ajdskha asiajh"}
+              price={20000}
+              place={"Bandung"}
+              href={"/#"}
+            />
+            <ProductCard
+              src={Logo}
+              style={{ width: "12rem" }}
+              title={"Product Name kana aksa aksna ajdskha asiajh"}
+              price={20000}
+              place={"Bandung"}
+              href={"/#"}
+            />
+            <ProductCard
+              src={Logo}
+              style={{ width: "12rem" }}
+              title={"Product Name kana aksa aksna ajdskha asiajh"}
+              price={20000}
+              place={"Bandung"}
+              href={"/#"}
+            />
+            <ProductCard
+              src={Logo}
+              style={{ width: "12rem" }}
+              title={"Product Name kana aksa aksna ajdskha asiajh"}
+              price={20000}
+              place={"Bandung"}
+              href={"/#"}
+            />
+            <ProductCard
+              src={Logo}
+              style={{ width: "12rem" }}
+              title={"Product Name kana aksa aksna ajdskha asiajh"}
+              price={20000}
+              place={"Bandung"}
+              href={"/#"}
+            />
+            <ProductCard
+              src={Logo}
+              style={{ width: "12rem" }}
+              title={"Product Name kana aksa aksna ajdskha asiajh"}
+              price={20000}
+              place={"Bandung"}
+              href={"/#"}
+            />
+            <ProductCard
+              src={Logo}
+              style={{ width: "12rem" }}
+              title={"Product Name kana aksa aksna ajdskha asiajh"}
+              price={20000}
+              place={"Bandung"}
+              href={"/#"}
+            />
+            <ProductCard
+              src={Logo}
+              style={{ width: "12rem" }}
+              title={"Product Name kana aksa aksna ajdskha asiajh"}
+              price={20000}
+              place={"Bandung"}
+              href={"/#"}
+            />
+          </Col>
+        </Row>
+      </section>
     </>
   );
 }

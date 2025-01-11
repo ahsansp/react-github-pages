@@ -1,0 +1,11 @@
+.product-image {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+}
+.title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+}
