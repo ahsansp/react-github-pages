@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-github-pages/static/css/main.c803095c.css",
-    "main.js": "/react-github-pages/static/js/main.1d6644d6.js",
+    "main.js": "/react-github-pages/static/js/main.cc1d6d89.js",
     "static/js/488.af104311.chunk.js": "/react-github-pages/static/js/488.af104311.chunk.js",
     "static/media/Logo.jpeg": "/react-github-pages/static/media/Logo.a356f5e330bdec887c1c.jpeg",
     "static/media/3.png": "/react-github-pages/static/media/3.b6bb4178c70a64956c3b.png",
@@ -10,11 +10,11 @@
     "static/media/logo.svg": "/react-github-pages/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/react-github-pages/index.html",
     "main.c803095c.css.map": "/react-github-pages/static/css/main.c803095c.css.map",
-    "main.1d6644d6.js.map": "/react-github-pages/static/js/main.1d6644d6.js.map",
+    "main.cc1d6d89.js.map": "/react-github-pages/static/js/main.cc1d6d89.js.map",
     "488.af104311.chunk.js.map": "/react-github-pages/static/js/488.af104311.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c803095c.css",
-    "static/js/main.1d6644d6.js"
+    "static/js/main.cc1d6d89.js"
   ]
 }
