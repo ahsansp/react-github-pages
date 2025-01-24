@@ -13,7 +13,7 @@ function IconApps(props) {
         <div className="logo rounded-circle overflow-hidden">
           <img src={props.src} className="w-100 h-100 ratio-1x1" />
         </div>
-        <p>{props.title}</p>
+        <p className="fs-6">{props.title}</p>
       </div>
     </>
   );

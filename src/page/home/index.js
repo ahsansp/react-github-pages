@@ -3,21 +3,25 @@ import {
   AdsSlide,
   IconApps,
   ProductCard,
-  ContainerProductCard,
   XSlideProduct,
 } from "../../component";
 import { Row, Col, Button, Card } from "react-bootstrap";
 import { Logo } from "../../asset";
 import "./style.css";
-import { useEffect, useRef } from "react";
+import AuthUser from "../../component/AuthUser";
+import { useEffect, useState } from "react";
+import api from "../../component/api";
+
 function Home() {
-  const navBarRef = useRef(null);
+  const [products, setProducts] = useState([]);
   useEffect(() => {
-    console.log(navBarRef);
-  }, [navBarRef]);
+    api.post("/product").then((response) => {
+      setProducts(response.data.data);
+    });
+  }, []);
   return (
     <>
-      <NavBar ref={navBarRef} />
+      <NavBar />
       <section>
         <div className="hero">
           <Row className="p-0 m-0">
@@ -70,6 +74,7 @@ function Home() {
                       objectFit: "cover",
                     }}
                     className="rounded"
+                    alt=""
                   />
                   <Col className="p-2">
                     <Button className="rounded-pill">
@@ -83,23 +88,97 @@ function Home() {
         </Row>
         <Row className="p-0 m-0 d-flex flex-column align-items-center">
           <Col lg={8}>
-            <Row className="justify-content-center">
-              <IconApps src={Logo} title={"apps"} className="col-lg-1" />
-              <IconApps src={Logo} title={"apps"} className="col-lg-1" />
-              <IconApps src={Logo} title={"apps"} className="col-lg-1" />
-              <IconApps src={Logo} title={"apps"} className="col-lg-1" />
-              <IconApps src={Logo} title={"apps"} className="col-lg-1" />
-              <IconApps src={Logo} title={"apps"} className="col-lg-1" />
+            <Row className="justify-content-center px-3">
+              <IconApps
+                src={Logo}
+                title={"Top Up Pulsa"}
+                className="col-lg-1 col-md-2 col-4"
+              />
+              <IconApps
+                src={Logo}
+                title={"Bayar Tagihan Listrik"}
+                className="col-lg-1 col-md-2 col-4"
+              />
+              <IconApps
+                src={Logo}
+                title={"Transfer"}
+                className="col-lg-1 col-md-2 col-4"
+              />
+              <IconApps
+                src={Logo}
+                title={"Top Up Sans-Pay"}
+                className="col-lg-1 col-md-2 col-4"
+              />
+              <IconApps
+                src={Logo}
+                title={"Bayar Asuransi"}
+                className="col-lg-1 col-md-2 col-4"
+              />
+              <IconApps
+                src={Logo}
+                title={"Cari Makanan"}
+                className="col-lg-1 col-md-2 col-4"
+              />
             </Row>
           </Col>
         </Row>
       </section>
       <section>
         <XSlideProduct
-          maxOffset={12 * 16 * 2}
-          offset={500}
+          offset={600}
           item={() => (
             <>
+              {products?.map((item) => (
+                <ProductCard
+                  src={item.image_url}
+                  style={{ width: "12rem" }}
+                  title={item.name}
+                  price={item.price}
+                  place={"Bandung"}
+                  href={"/#"}
+                />
+              ))}
+            </>
+          )}
+        />
+      </section>
+      <section>
+        <XSlideProduct
+          offset={600}
+          item={() => (
+            <>
+              <ProductCard
+                src={Logo}
+                style={{ width: "12rem" }}
+                title={"Product Name kana aksa aksna ajdskha asiajh"}
+                price={20000}
+                place={"Bandung"}
+                href={"/#"}
+              />
+              <ProductCard
+                src={Logo}
+                style={{ width: "12rem" }}
+                title={"Product Name kana aksa aksna ajdskha asiajh"}
+                price={20000}
+                place={"Bandung"}
+                href={"/#"}
+              />
+              <ProductCard
+                src={Logo}
+                style={{ width: "12rem" }}
+                title={"Product Name kana aksa aksna ajdskha asiajh"}
+                price={20000}
+                place={"Bandung"}
+                href={"/#"}
+              />
+              <ProductCard
+                src={Logo}
+                style={{ width: "12rem" }}
+                title={"Product Name kana aksa aksna ajdskha asiajh"}
+                price={20000}
+                place={"Bandung"}
+                href={"/#"}
+              />
               <ProductCard
                 src={Logo}
                 style={{ width: "12rem" }}
@@ -152,164 +231,8 @@ function Home() {
           )}
         />
       </section>
-      <section>
-        <Row className="p-0 m-0">
-          <Col className="d-flex px-1 overflow-auto">
-            <ProductCard
-              src={Logo}
-              style={{ width: "12rem" }}
-              title={"Product Name kana aksa aksna ajdskha asiajh"}
-              price={20000}
-              place={"Bandung"}
-              href={"/#"}
-            />
-            <ProductCard
-              src={Logo}
-              style={{ width: "12rem" }}
-              title={"Product Name kana aksa aksna ajdskha asiajh"}
-              price={20000}
-              place={"Bandung"}
-              href={"/#"}
-            />
-            <ProductCard
-              src={Logo}
-              style={{ width: "12rem" }}
-              title={"Product Name kana aksa aksna ajdskha asiajh"}
-              price={20000}
-              place={"Bandung"}
-              href={"/#"}
-            />
-            <ProductCard
-              src={Logo}
-              style={{ width: "12rem" }}
-              title={"Product Name kana aksa aksna ajdskha asiajh"}
-              price={20000}
-              place={"Bandung"}
-              href={"/#"}
-            />
-            <ProductCard
-              src={Logo}
-              style={{ width: "12rem" }}
-              title={"Product Name kana aksa aksna ajdskha asiajh"}
-              price={20000}
-              place={"Bandung"}
-              href={"/#"}
-            />
-            <ProductCard
-              src={Logo}
-              style={{ width: "12rem" }}
-              title={"Product Name kana aksa aksna ajdskha asiajh"}
-              price={20000}
-              place={"Bandung"}
-              href={"/#"}
-            />
-            <ProductCard
-              src={Logo}
-              style={{ width: "12rem" }}
-              title={"Product Name kana aksa aksna ajdskha asiajh"}
-              price={20000}
-              place={"Bandung"}
-              href={"/#"}
-            />
-            <ProductCard
-              src={Logo}
-              style={{ width: "12rem" }}
-              title={"Product Name kana aksa aksna ajdskha asiajh"}
-              price={20000}
-              place={"Bandung"}
-              href={"/#"}
-            />
-            <ProductCard
-              src={Logo}
-              style={{ width: "12rem" }}
-              title={"Product Name kana aksa aksna ajdskha asiajh"}
-              price={20000}
-              place={"Bandung"}
-              href={"/#"}
-            />
-          </Col>
-        </Row>
-      </section>
-      <section>
-        <Row className="p-0 m-0">
-          <Col className="d-flex px-1 overflow-auto">
-            <ProductCard
-              src={Logo}
-              style={{ width: "12rem" }}
-              title={"Product Name kana aksa aksna ajdskha asiajh"}
-              price={20000}
-              place={"Bandung"}
-              href={"/#"}
-            />
-            <ProductCard
-              src={Logo}
-              style={{ width: "12rem" }}
-              title={"Product Name kana aksa aksna ajdskha asiajh"}
-              price={20000}
-              place={"Bandung"}
-              href={"/#"}
-            />
-            <ProductCard
-              src={Logo}
-              style={{ width: "12rem" }}
-              title={"Product Name kana aksa aksna ajdskha asiajh"}
-              price={20000}
-              place={"Bandung"}
-              href={"/#"}
-            />
-            <ProductCard
-              src={Logo}
-              style={{ width: "12rem" }}
-              title={"Product Name kana aksa aksna ajdskha asiajh"}
-              price={20000}
-              place={"Bandung"}
-              href={"/#"}
-            />
-            <ProductCard
-              src={Logo}
-              style={{ width: "12rem" }}
-              title={"Product Name kana aksa aksna ajdskha asiajh"}
-              price={20000}
-              place={"Bandung"}
-              href={"/#"}
-            />
-            <ProductCard
-              src={Logo}
-              style={{ width: "12rem" }}
-              title={"Product Name kana aksa aksna ajdskha asiajh"}
-              price={20000}
-              place={"Bandung"}
-              href={"/#"}
-            />
-            <ProductCard
-              src={Logo}
-              style={{ width: "12rem" }}
-              title={"Product Name kana aksa aksna ajdskha asiajh"}
-              price={20000}
-              place={"Bandung"}
-              href={"/#"}
-            />
-            <ProductCard
-              src={Logo}
-              style={{ width: "12rem" }}
-              title={"Product Name kana aksa aksna ajdskha asiajh"}
-              price={20000}
-              place={"Bandung"}
-              href={"/#"}
-            />
-            <ProductCard
-              src={Logo}
-              style={{ width: "12rem" }}
-              title={"Product Name kana aksa aksna ajdskha asiajh"}
-              price={20000}
-              place={"Bandung"}
-              href={"/#"}
-            />
-          </Col>
-        </Row>
-      </section>
     </>
   );
 }
 
-export default Home;
+export default AuthUser(Home);

@@ -1,17 +1,12 @@
-import {
-  Form,
-  Nav,
-  Navbar,
-  NavDropdown,
-  Container,
-  Button,
-} from "react-bootstrap";
+import { Form, Nav, Navbar, NavDropdown, Container } from "react-bootstrap";
 import { Logo } from "../../asset";
 import "./style.css";
+import { useNavigate } from "react-router-dom";
 
-function NavBar() {
+function NavBar({ props }) {
+  const naviget = useNavigate();
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className="bg-body-tertiary sticky-top">
       <Container>
         <Navbar.Brand href="#home">
           <img
@@ -25,8 +20,8 @@ function NavBar() {
         </Navbar.Brand>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
+            <Nav.Link href="#/login">Home</Nav.Link>
+            <Nav.Link href="#/sigin">Link</Nav.Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
@@ -61,6 +56,16 @@ function NavBar() {
           </Form>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
         </div>
+        <Nav.Link
+          className="rounded-circle bg bg-success"
+          style={{ width: "50px", height: "50px" }}
+          href="#/login"
+        >
+          <img
+            src="https://api.dicebear.com/9.x/initials/svg?seed=ahsans&radius=50"
+            alt="avatar"
+          />
+        </Nav.Link>
       </Container>
     </Navbar>
   );
